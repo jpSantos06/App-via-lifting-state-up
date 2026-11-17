@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap');
+
+:root {
+  font-family: 'DM Sans', sans-serif;
+  color: #172033;
+  background: #eef2f8;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; min-height: 100vh; }
+button, input { font: inherit; }
+.pagina {
+  min-height: 100vh; padding: 56px 20px; display: flex; justify-content: center; align-items: flex-start;
+  background: radial-gradient(circle at 15% 10%, #dce8ff 0, transparent 32%), #eef2f8;
+}
+.painel {
+  width: min(100%, 720px); padding: 38px; background: #fff; border: 1px solid #e6eaf1;
+  border-radius: 24px; box-shadow: 0 24px 70px rgba(35, 52, 83, .10);
+}
+.cabecalho { display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; }
+.etiqueta { color: #6478bd; font-size: 11px; font-weight: 700; letter-spacing: 1.7px; }
+h1 { margin: 9px 0 7px; font: 800 clamp(25px, 5vw, 34px)/1.2 'Manrope', sans-serif; letter-spacing: -1.2px; }
+.subtitulo { margin: 0; color: #7c879b; font-size: 14px; }
+.cronometro { display: flex; align-items: center; gap: 9px; padding: 10px 13px; background: #f3f5fb; border-radius: 13px; color: #6478bd; white-space: nowrap; }
+.cronometro-icone { font-size: 23px; }
+.cronometro strong, .cronometro small { display: block; }
+.cronometro strong { color: #29395e; font-size: 14px; font-variant-numeric: tabular-nums; }
+.cronometro small { color: #8993a6; font-size: 10px; }
+.resumo { display: flex; align-items: center; gap: 13px; margin: 30px 0; padding: 16px 18px; border-radius: 15px; background: #f6f7fc; }
+.resumo-numero { width: 43px; height: 43px; display: grid; place-items: center; border-radius: 12px; background: #e5eaff; color: #5268b4; font: 800 20px 'Manrope'; }
+.resumo strong, .resumo span { display: block; }
+.resumo strong { font-size: 14px; }
+.resumo span { margin-top: 3px; color: #8993a6; font-size: 12px; }
+.formulario label { display: block; margin-bottom: 9px; font-size: 13px; font-weight: 700; }
+.campo-acoes { display: flex; gap: 10px; }
+.campo-acoes input { flex: 1; min-width: 0; padding: 13px 15px; border: 1px solid #dfe4ed; border-radius: 11px; outline: none; transition: border .2s, box-shadow .2s; }
+.campo-acoes input:focus { border-color: #7488d4; box-shadow: 0 0 0 3px #7488d41c; }
+.campo-acoes input::placeholder { color: #aab2c0; }
+.campo-acoes button { padding: 0 17px; border: 0; border-radius: 11px; background: #5268b4; color: #fff; font-weight: 700; cursor: pointer; transition: background .2s, transform .2s; }
+.campo-acoes button:hover { background: #40559e; transform: translateY(-1px); }
+.campo-acoes button span { margin-left: 5px; font-size: 18px; vertical-align: -1px; }
+.mensagem-erro { margin: 8px 0 0; color: #d04455; font-size: 12px; }
+.secao-lista { margin-top: 34px; }
+.secao-lista h2 { display: flex; align-items: center; gap: 9px; margin: 0 0 13px; font: 700 16px 'Manrope'; }
+.secao-lista h2 span { display: grid; place-items: center; min-width: 23px; height: 23px; padding: 0 6px; border-radius: 8px; background: #f0f2fa; color: #6577b7; font: 700 11px 'DM Sans'; }
+.lista { display: grid; gap: 9px; padding: 0; margin: 0; list-style: none; }
+.item-tarefa { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 13px 14px; border: 1px solid #edf0f5; border-radius: 12px; transition: background .2s; }
+.item-tarefa:hover { background: #fafbfe; }
+.tarefa-label { display: flex; align-items: center; gap: 11px; min-width: 0; cursor: pointer; }
+.tarefa-label input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.check-personalizado { width: 19px; height: 19px; flex: 0 0 19px; border: 1.5px solid #cbd2df; border-radius: 6px; }
+.tarefa-label input:checked + .check-personalizado { border-color: #6479c4; background: #6479c4; }
+.tarefa-label input:checked + .check-personalizado::after { content: '✓'; display: block; color: #fff; text-align: center; font-size: 13px; line-height: 17px; }
+.texto-tarefa { overflow-wrap: anywhere; font-size: 14px; }
+.concluida .texto-tarefa { color: #9ba3b1; text-decoration: line-through; }
+.botao-remover { width: 29px; height: 29px; flex: 0 0 29px; border: 0; border-radius: 8px; background: transparent; color: #a0a8b6; font-size: 22px; cursor: pointer; }
+.botao-remover:hover { background: #fff0f1; color: #d04455; }
+.lista-vazia { display: grid; justify-items: center; gap: 6px; padding: 34px 15px; border: 1px dashed #dfe4ed; border-radius: 14px; color: #8792a5; text-align: center; }
+.lista-vazia > span { color: #8b9bd4; font-size: 24px; }
+.lista-vazia strong { color: #4b5870; font-size: 13px; }
+.lista-vazia p { margin: 0; font-size: 12px; }
+.rodape { margin-top: 30px; padding-top: 17px; border-top: 1px solid #edf0f5; color: #9aa3b2; font-size: 11px; text-align: center; }
+.rodape code { color: #6577b7; }
+@media (max-width: 560px) {
+  .pagina { padding: 20px 12px; }
+  .painel { padding: 24px 18px; border-radius: 18px; }
+  .cabecalho { flex-direction: column; }
+  .cronometro { align-self: flex-start; }
+  .campo-acoes { flex-direction: column; }
+  .campo-acoes button { padding: 13px; }
+}
